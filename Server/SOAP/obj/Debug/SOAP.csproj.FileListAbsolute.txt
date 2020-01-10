@@ -1,0 +1,17 @@
+D:\Desktop\ЮУрГУ\2 Курс\веб-сервисы\Курсовая\Coursework\SOAP\bin\SOAP.dll.config
+D:\Desktop\ЮУрГУ\2 Курс\веб-сервисы\Курсовая\Coursework\SOAP\bin\SOAP.dll
+D:\Desktop\ЮУрГУ\2 Курс\веб-сервисы\Курсовая\Coursework\SOAP\bin\SOAP.pdb
+D:\Desktop\ЮУрГУ\2 Курс\веб-сервисы\Курсовая\Coursework\SOAP\obj\Debug\SOAP.csprojAssemblyReference.cache
+D:\Desktop\ЮУрГУ\2 Курс\веб-сервисы\Курсовая\Coursework\SOAP\obj\Debug\SOAP.dll
+D:\Desktop\ЮУрГУ\2 Курс\веб-сервисы\Курсовая\Coursework\SOAP\obj\Debug\SOAP.pdb
+D:\Desktop\ЮУрГУ\2 Курс\веб-сервисы\Курсовая\Coursework\SOAP\bin\REST_XMLRPC.dll
+D:\Desktop\ЮУрГУ\2 Курс\веб-сервисы\Курсовая\Coursework\SOAP\bin\CookComputing.XmlRpcV2.dll
+D:\Desktop\ЮУрГУ\2 Курс\веб-сервисы\Курсовая\Coursework\SOAP\bin\EntityFramework.dll
+D:\Desktop\ЮУрГУ\2 Курс\веб-сервисы\Курсовая\Coursework\SOAP\bin\Newtonsoft.Json.dll
+D:\Desktop\ЮУрГУ\2 Курс\веб-сервисы\Курсовая\Coursework\SOAP\bin\REST_XMLRPC.pdb
+D:\Desktop\ЮУрГУ\2 Курс\веб-сервисы\Курсовая\Coursework\SOAP\bin\REST_XMLRPC.dll.config
+D:\Desktop\ЮУрГУ\2 Курс\веб-сервисы\Курсовая\Coursework\SOAP\bin\EntityFramework.xml
+D:\Desktop\ЮУрГУ\2 Курс\веб-сервисы\Курсовая\Coursework\SOAP\bin\Newtonsoft.Json.xml
+D:\Desktop\ЮУрГУ\2 Курс\веб-сервисы\Курсовая\Coursework\SOAP\obj\Debug\SOAP.csproj.CopyComplete
+D:\Desktop\ЮУрГУ\2 Курс\веб-сервисы\Курсовая\Coursework\SOAP\bin\EntityFramework.SqlServer.dll
+D:\Desktop\ЮУрГУ\2 Курс\веб-сервисы\Курсовая\Coursework\SOAP\bin\EntityFramework.SqlServer.xml

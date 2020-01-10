@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище CourseworkDBModelContainer" CdmEntityContainer="CourseworkDBContext">
+    <EntitySetMapping Name="Contents">
+      <EntityTypeMapping TypeName="CourseworkDBModel.Contents">
+        <MappingFragment StoreEntitySet="Contents">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TopicsId" ColumnName="TopicsId" />
+          <ScalarProperty Name="ContentTypeId" ColumnName="ContentTypeId" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContentTypes">
+      <EntityTypeMapping TypeName="CourseworkDBModel.ContentTypes">
+        <MappingFragment StoreEntitySet="ContentTypes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Subscriptions">
+      <EntityTypeMapping TypeName="CourseworkDBModel.Subscriptions">
+        <MappingFragment StoreEntitySet="Subscriptions">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ContentId" ColumnName="ContentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Topics">
+      <EntityTypeMapping TypeName="CourseworkDBModel.Topics">
+        <MappingFragment StoreEntitySet="Topics">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="CourseworkDBModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

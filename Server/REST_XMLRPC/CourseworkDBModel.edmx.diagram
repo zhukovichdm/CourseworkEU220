@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="129efc3a4b8642c4bc79841e68251db9" Name="Diagram1">
+        <EntityTypeShape EntityType="CourseworkDBModel.Contents" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourseworkDBModel.ContentTypes" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourseworkDBModel.Subscriptions" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourseworkDBModel.Topics" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourseworkDBModel.Users" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <AssociationConnector Association="CourseworkDBModel.FK_Contents_ContentTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="CourseworkDBModel.FK_Contents_Topics" ManuallyRouted="false" />
+        <AssociationConnector Association="CourseworkDBModel.FK_Subscriptions_Contents" ManuallyRouted="false" />
+        <AssociationConnector Association="CourseworkDBModel.FK_Subscriptions_Users" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

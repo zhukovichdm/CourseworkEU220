@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище CourseworkModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Contents">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TopicsId" Type="int" Nullable="false" />
+    <Property Name="ContentTypeId" Type="int" Nullable="false" />
+    <Property Name="Price" Type="float" />
+    <Property Name="Data" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="ContentTypes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Subscriptions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="ContentId" Type="int" Nullable="false" />
+    <Property Name="Date" Type="date" />
+  </EntityType>
+  <EntityType Name="Topics">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Age" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Contents_Tutorials">
+    <End Role="Topics" Type="Self.Topics" Multiplicity="1" />
+    <End Role="Contents" Type="Self.Contents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Topics">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Contents">
+        <PropertyRef Name="TopicsId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Contents_TutorialsTypes">
+    <End Role="ContentTypes" Type="Self.ContentTypes" Multiplicity="1" />
+    <End Role="Contents" Type="Self.Contents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ContentTypes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Contents">
+        <PropertyRef Name="ContentTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Subscriptions_Contents">
+    <End Role="Contents" Type="Self.Contents" Multiplicity="1" />
+    <End Role="Subscriptions" Type="Self.Subscriptions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contents">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Subscriptions">
+        <PropertyRef Name="ContentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Subscriptions_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="Subscriptions" Type="Self.Subscriptions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Subscriptions">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище CourseworkModelContainer">
+    <EntitySet Name="Contents" EntityType="Self.Contents" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ContentTypes" EntityType="Self.ContentTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Subscriptions" EntityType="Self.Subscriptions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Topics" EntityType="Self.Topics" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Contents_Tutorials" Association="Self.FK_Contents_Tutorials">
+      <End Role="Topics" EntitySet="Topics" />
+      <End Role="Contents" EntitySet="Contents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Contents_TutorialsTypes" Association="Self.FK_Contents_TutorialsTypes">
+      <End Role="ContentTypes" EntitySet="ContentTypes" />
+      <End Role="Contents" EntitySet="Contents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Subscriptions_Contents" Association="Self.FK_Subscriptions_Contents">
+      <End Role="Contents" EntitySet="Contents" />
+      <End Role="Subscriptions" EntitySet="Subscriptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Subscriptions_Users" Association="Self.FK_Subscriptions_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Subscriptions" EntitySet="Subscriptions" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
